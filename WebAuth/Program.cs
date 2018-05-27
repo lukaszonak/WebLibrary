@@ -15,6 +15,7 @@ namespace WebAuth
         public static void Main(string[] args)
         {
             BuildWebHost(args).Run();
+            //siema
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
