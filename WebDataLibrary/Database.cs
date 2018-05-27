@@ -21,6 +21,7 @@ namespace WebServer.WebDataLibrary
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
 
+        // do wywalenia? 
         /*
 
                protected override void OnModelCreating(DbModelBuilder modelBuilder)
