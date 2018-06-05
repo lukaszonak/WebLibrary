@@ -11,9 +11,10 @@ using WebServer.WebDataLibrary;
 namespace WebDataLibrary.Migrations
 {
     [DbContext(typeof(DatabaseModel))]
-    partial class DatabaseModelModelSnapshot : ModelSnapshot
+    [Migration("20180605183822_uproszczenie_mdelu_Usera")]
+    partial class uproszczenie_mdelu_Usera
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

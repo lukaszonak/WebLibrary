@@ -8,42 +8,12 @@ namespace WebDataLibrary.Entities
 {
     public class User
     {
-        public User()
-        {
-
-        }
-        [Key]
-        [Display(Name = "User Id:")]
-        public int UserId { get; set; }
-
-        [Display(Name = "Name:")]
-        [Required]
-        [MaxLength(40)]
-        public string Name { get; set; }
-
-        [Display(Name = "Surname:")]
-        [Required]
-        [MaxLength(100)]
-        public string Surname { get; set; }
-
-        [Display(Name = "Login:")]
-        [Required]
-        [MaxLength(40)]
-        public string Login { get; set; }
-
-        [Display(Name = "Password:")]
-        [Required]
-        [MaxLength(40)]
-        public string Password { get; set; }
-
-        [Display(Name = "Login status:")]
-        [MaxLength(20)]
-        public string LoginStatus { get; set; }
-
-        [Display(Name = "Active:")]
-        public bool Active { get; set; }
-
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public byte[] PasswordHash { get; set; }
+        public byte[] PasswordSalt { get; set; }
         public int RoleId { get; set; }
         public virtual Role Role { get; set; }
     }
+
 }
