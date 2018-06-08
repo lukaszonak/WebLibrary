@@ -9,6 +9,9 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
+import { LogInComponent } from './components/log-in/log-in.component';
+import { AuthService } from './_services/auth.service';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
     declarations: [
@@ -16,7 +19,9 @@ import { CounterComponent } from './components/counter/counter.component';
         NavMenuComponent,
         CounterComponent,
         FetchDataComponent,
-        HomeComponent
+        HomeComponent,
+        LogInComponent,
+        RegisterComponent
     ],
     imports: [
         CommonModule,
@@ -29,7 +34,8 @@ import { CounterComponent } from './components/counter/counter.component';
             { path: 'fetch-data', component: FetchDataComponent },
             { path: '**', redirectTo: 'home' }
         ])
-    ]
+    ],
+    providers: [AuthService]
 })
 export class AppModuleShared {
 }
